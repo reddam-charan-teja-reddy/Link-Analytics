@@ -1,0 +1,10 @@
+.env
+*.log
+server
+*.exe
+
+web/node_modules
+web/dist
+
+.playwright-mcp
+skills
