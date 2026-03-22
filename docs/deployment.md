@@ -19,7 +19,6 @@ cp web/.env.example web/.env
 
 Review at minimum:
 
-- `POSTGRES_PASSWORD`
 - `JWT_SECRET`
 - `APP_ENV`
 - `BASE_URL`
