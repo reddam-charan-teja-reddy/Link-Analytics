@@ -129,10 +129,3 @@ Frontend (`web/.env`):
 - `docs/deployment.md` - local + production deployment notes
 - `web/README.md` - frontend-specific guide
 
-## Known limitations (current behavior)
-
-- click events can still be lost if both in-memory queue and Redis overflow persistence are unavailable
-- no persistent long-term analytics queue (current overflow durability depends on Redis availability)
-- source-filter mode in group detail currently uses source-tag view (`?src=...`) rather than source-hash expansion
-
-See docs for mitigation and hardening guidance.
