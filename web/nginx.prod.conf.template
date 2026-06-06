@@ -1,5 +1,5 @@
 server {
-  listen 80;
+  listen ${PORT};
   server_name _;
   
   add_header X-Frame-Options "DENY" always;
@@ -22,7 +22,7 @@ server {
   }
 
   location /api/ {
-    proxy_pass ${BACKEND_URL};
+    proxy_pass ${BACKEND_URL}/api/;
     proxy_ssl_server_name on;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -30,7 +30,7 @@ server {
   }
 
   location /auth/ {
-    proxy_pass ${BACKEND_URL};
+    proxy_pass ${BACKEND_URL}/auth/;
     proxy_ssl_server_name on;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;

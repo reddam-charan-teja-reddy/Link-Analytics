@@ -1,6 +1,6 @@
 .env
 *.log
-server
+/server
 *.exe
 
 web/node_modules
